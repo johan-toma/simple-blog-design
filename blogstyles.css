@@ -1,10 +1,35 @@
-* {
-    box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+:root {
+    --text: 234, 239, 244;
+    --background: 8, 14, 20;
+    --primary: 145, 178, 219;
+    --secondary: 31, 73, 126;
+    --accent: 70, 138, 223;
 }
 
+
+* {
+    box-sizing: border-box;
+    font-family: "Noto Traditional Nushu", sans-serif;
+}
 
 body {
     padding: 0;
     margin: 0;
+    background-color: rgba(var(--background), 1);
+    color: rgba(var(--text), 1);
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    display: grid;
 }
+
+
+
+a {
+    color: rgba(var(--text), 1);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+
+

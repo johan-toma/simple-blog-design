@@ -21,7 +21,7 @@ body {
     overflow-x: hidden;
 }
 
-.header-section{
+.header-section {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -171,5 +171,33 @@ a {
 @media (max-width: 600px) {
     .card-section {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    a {
+        font-size: 0.8rem;
+        padding: 0;
+    }
+
+    .hero-section .title {
+        font-size: 2rem;
+    }
+
+    .hero-section .sub-title {
+        font-size: 0.8rem;
+    }
+
+    .header-section {
+        padding: 30px 10%;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .card-section {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    a {
+        font-size: 1rem;
     }
 }

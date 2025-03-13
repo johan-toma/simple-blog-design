@@ -29,7 +29,10 @@ body {
 }
 
 .main-section {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 30px 10%;
 }
 
@@ -41,10 +44,30 @@ body {
 
 .card {
     background-color: rgba(var(--secondary), 1);
-    box-shadow: 0 0 0.5rem rgba(var(--secondary), 1);
+    box-shadow: 0 0 0.7rem rgba(var(--secondary), 1);
     border-radius: 0.5em;
     height: 100%;
     width: 100%;
+    overflow: hidden;
+}
+
+.image-content {
+    transition: all 400ms ease-in-out;
+    overflow: hidden;
+    width: 100%;
+}
+
+.card:hover > .image-content {
+    filter: blur(2px);
+}
+
+.image-content .card-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 16 / 9;
 }
 
 .text-content .card-title {
@@ -86,14 +109,18 @@ ul li {
 a {
     color: rgba(var(--text), 1);
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    font-weight: 100;
     transition: all 150ms ease-in-out;
 }
 
-.header-ul li a:hover {
-    color: rgba(var(--accent), 1);
-    text-shadow: 0 0 1px white;
+.main-ul li a {
+    color: rgba(var(--text), 0.6);
 }
+
+.header-ul li a:hover, .main-nav .main-ul li a:hover {
+    color: rgba(var(--accent), 1);
+} 
 
 .hero-section {
     display: grid;
@@ -132,3 +159,4 @@ a {
     text-align: center;
     padding: 20px;
 }
+

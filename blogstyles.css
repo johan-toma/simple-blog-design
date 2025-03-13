@@ -1,11 +1,10 @@
 :root {
-    --text: 234, 239, 244;
-    --background: 8, 14, 20;
-    --primary: 145, 178, 219;
-    --secondary: 31, 73, 126;
-    --accent: 70, 138, 223;
+    --text: 237, 235, 236;
+    --background: 22, 12, 15;
+    --primary: 218, 144, 169;
+    --secondary: 147, 24, 65;
+    --accent: 249, 32, 104;
 }
-
 
 * {
     box-sizing: border-box;
@@ -22,11 +21,53 @@ body {
     overflow-x: hidden;
 }
 
-.header-section {
+.header-section{
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 30px 20%;
+}
+
+.main-section {
+    
+    padding: 30px 10%;
+}
+
+.card-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+}
+
+.card {
+    background-color: rgba(var(--secondary), 1);
+    box-shadow: 0 0 0.5rem rgba(var(--secondary), 1);
+    border-radius: 0.5em;
+    height: 100%;
+    width: 100%;
+}
+
+.text-content .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.text-content .card-style {
+    font-size: 0.8rem;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+}
+
+.text-content .card-date {
+    color: rgba(var(--primary), 1);
+    font-weight: 600;
+}
+
+.text-content .card-tag {
+    font-weight: 600;
 }
 
 .logo {
@@ -54,6 +95,40 @@ a {
     text-shadow: 0 0 1px white;
 }
 
+.hero-section {
+    display: grid;
+    place-items: center;
+}
 
+.hero-section .title-icon {
+    width: 200px;
+    object-fit: cover;
+    object-position: center;
+    padding: 20px;
+    margin: 0 auto;
+    aspect-ratio: 1 / 1
+}
 
+.hero-section .title {
+    font-weight: 500;
+    color: rgba(var(--primary), 1);
+    margin: 0;
+    font-style: italic;
+    font-size: 3rem;
+}
 
+.hero-section .sub-title {
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+
+.main-nav {
+    padding: 1rem 0.5rem;
+}
+
+.footer-section .footer-text {
+    font-size: 1.5rem;
+    color: rgba(var(--primary), 1);
+    text-align: center;
+    padding: 20px;
+}

@@ -69,7 +69,12 @@ body {
     object-position: center;
     object-fit: cover;
     aspect-ratio: 16 / 9;
-    transition: transform 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+.card:hover > .card-header.card-image > img, .card:focus > .card-header.card-image > img{
+    filter: blur(3px);
+    transform: scale(1.01);
 }
 
 .card-header {
@@ -129,6 +134,8 @@ a {
 .header-ul li a:hover, .main-nav .main-ul li a:hover {
     color: rgba(var(--accent), 1);
 } 
+
+
 
 .hero-section {
     display: grid;
@@ -191,6 +198,8 @@ a {
     }
 
 }
+
+
 
 @media (max-width: 1024px) {
     .card-section {
